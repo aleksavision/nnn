@@ -20,14 +20,6 @@ abstract public class BaseTest {
         Configuration.webdriverLogsEnabled = true;
         Configuration.browserSize = "1920x1080";
         Configuration.headless = false;
-        Configuration.remote = "http://localhost:4444/wd/hub";
-
-        // Устанавливаем браузер, который будет использоваться на удаленном веб-драйвере
-        Configuration.browser = "chrome";
-
-        // Устанавливаем браузерные опции
-        Configuration.browserCapabilities.setCapability("enableVNC", true);
-        Configuration.browserCapabilities.setCapability("enableVideo", false);
         Selenide.open(mainUrl);
         homepage = new Homepage();
     }
